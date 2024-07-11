@@ -24,6 +24,7 @@ body{
 }
 .first-image{ 
     z-index: 1;
+    opacity: 1;
 }
 .second-image{ 
     z-index: 0;
@@ -33,13 +34,16 @@ body{
     top: 50%;
     transform: translate(-50% , -50%);
     position: relative;  
+    background-color: hsl(178, 100%, 50%,0.4) ;
+    padding: 122px;
+    padding-left: 141px;
+    cursor: pointer;
 }
 .image-class{
     display: grid;
     grid-template-columns: 00px 150px;
 
 }
-
 .first-title{ 
     font-weight: 700;
     color: white;
@@ -48,12 +52,13 @@ body{
 }
 .second-image:active{ 
     z-index: 1;
-    
+   cursor: pointer;
+}
+.image-class :active{ 
+    cursor: pointer;
 }
 .first-image:active{ 
     z-index: 0;
-}
-.first-title:hover , .second-part:hover , .image-class img:hover{ 
     cursor: pointer;
 }
 .first-title:active  , .second-part:active { 
@@ -119,4 +124,13 @@ body{
 }
 .second-part{ 
     color: white;
+}
+@media(max-width:375px){ 
+    .container ,  .second-image{ 
+        max-width: 80%;
+    }
+  .statistique{ 
+    grid-template-columns: 170px 1fr; 
+     }
+
 }
